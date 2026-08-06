@@ -65,8 +65,16 @@ while True:
             for index, item in enumerate(to_do_list, start=1):
                 print(f"{index}. {item}")
 
-        del_no = int(input("Delete task no:"))
-        del_num = del_no-1
-        if 0 <= del_num < len(to_do_list) :
-            delete = to_do_list.pop(del_num)
-            print(f"--TASK {del_num} DELETED SUCCESSFULLY.--")
+            del_no = int(input("Delete task no:"))
+            del_num = del_no-1
+            if 0 <= del_num < len(to_do_list) :
+                delete = to_do_list.pop(del_num)
+                print("--TASK DELETED SUCCESSFULLY.--")
+
+
+    elif choice==5:
+        print("EXITING TASK")
+        break
+
+    else:
+        print("Choose valid number from 1-5:")
