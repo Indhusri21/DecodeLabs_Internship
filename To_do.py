@@ -1,7 +1,7 @@
 to_do_list = []
 
 def menu():
-    print("========= TO-DO LIST =========")
+    print("\n========= TO-DO LIST =========")
     print("1. ADD TASK")
     print("2. VIEW TASK")
     print("3. EDIT TASK")
