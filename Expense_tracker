@@ -1,5 +1,5 @@
 def expense_tracker():
-    total_spent = 0.0
+    expenses=[]
 
     print("===================================")
     print("         EXPENSE TRACKER           ")
@@ -15,13 +15,15 @@ def expense_tracker():
             break
 
         try:
-            expense_amount = int(expense_amount)
-            total_spent+=expense_amount
-            float(total_spent)
+            expense_amount = float(expense_amount)
+            expenses.append(expense_amount)
         except ValueError:
             print("Invalid entry.Enter valid number.")
-
-
+    print("\n--------RECORDED EXPENSES-------")
+    for index, amount in enumerate(expenses, start=1):
+        print(f"Expense {index}: ₹{amount:.2f}")
+        
+    total_spent = sum(expenses)
     print("\n--------TOTAL EXPENSE---------")
     print(f"₹{total_spent:.2f}")
     print("--------------------------------")
