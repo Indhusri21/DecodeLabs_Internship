@@ -1,0 +1,28 @@
+def expense_tracker():
+    total_spent = 0.0
+
+    print("===================================")
+    print("         EXPENSE TRACKER           ")
+    print("===================================")
+
+    print("\nENTER EXPENSE AMOUNTS:"
+    "\n[Enter 0 when you entered all expense amounts]")
+
+    while True:
+        expense_amount = input().strip()
+
+        if expense_amount == "0":
+            break
+
+        try:
+            expense_amount = int(expense_amount)
+            total_spent+=expense_amount
+            float(total_spent)
+        except ValueError:
+            print("Invalid entry.Enter valid number.")
+
+
+    print("\n--------TOTAL EXPENSE---------")
+    print(f"₹{total_spent:.2f}")
+    print("--------------------------------")
+expense_tracker()
